@@ -1,0 +1,224 @@
+.ourNews {
+  margin-bottom: 50px;
+  @media (max-width: 800px) {
+    margin-top: 20px;
+  }
+}
+
+.news-title {
+  font-family: $fontFamilyDop;
+  position: relative;
+  margin-bottom: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #424242;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+  background-color: #170000;
+  border-radius: 30px;
+  -webkit-box-shadow: 7px 19px 29px -4px rgba(48, 0, 4, 1);
+  -moz-box-shadow: 7px 19px 29px -4px rgba(48, 0, 4, 1);
+  box-shadow: 7px 19px 29px -4px rgba(48, 0, 4, 1);
+  @media (max-width: 1024px) {
+    height: 50vh;
+  }
+}
+
+.item {
+  border-radius: 5px;
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+
+  &:hover {
+    flex: 2;
+  }
+}
+
+.social {
+  position: absolute;
+  right: 35px;
+  bottom: 0;
+
+  img {
+    display: block;
+    width: 32px;
+  }
+}
+
+.btn-news {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-news:active,
+.btn-news:hover {
+  background-color: #170000;
+}
+
+// hover 2
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+.hovereffect .overlay {
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  height: 4.75em;
+  background: #79fac4;
+  color: #3c4a50;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  visibility: hidden;
+  font-family: $fontFamilyDop;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+}
+
+.hovereffect:hover img {
+  -webkit-transform: translate3d(0, -3%, 0);
+  transform: translate3d(0, -3%, 0);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  float: left;
+  margin: 0px;
+  display: inline-block;
+}
+
+.hovereffect a.info {
+  display: inline-block;
+  text-decoration: none;
+  padding: 7px 14px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  margin: 50px 0 0 0;
+  background-color: transparent;
+}
+.hovereffect a.info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect p.icon-links a {
+  float: right;
+  color: #3c4a50;
+  font-size: 1.4em;
+}
+
+.hovereffect:hover p.icon-links a:hover,
+.hovereffect:hover p.icon-links a:focus {
+  color: #252d31;
+}
+
+.hovereffect h2,
+.hovereffect p.icon-links a {
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0);
+  visibility: visible;
+}
+
+.hovereffect p.icon-links a span:before {
+  display: inline-block;
+  padding: 8px 10px;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hovereffect:hover .overlay,
+.hovereffect:hover h2,
+.hovereffect:hover p.icon-links a {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.hovereffect:hover h2 {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.hovereffect:hover p.icon-links a:nth-child(2) {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+
+.hovereffect:hover p.icon-links a:first-child {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.hovereffect .img-responsive {
+  height: 100%;
+}
+
+.hovereffect .carousel .carousel-indicators {
+  margin-bottom: 0.6rem;
+}
+
+.hovereffect .carousel .carousel-inner {
+  border-radius: 20px;
+  height: 70vh;
+  @media (max-width: 1024px) {
+    height: 50vh;
+  }
+}
+
+.hovereffect .carousel-item img {
+  border-radius: 20px;
+  height: 70vh;
+}
+.hovereffect .carousel-item {
+  border-radius: 20px;
+  height: 70vh;
+}
+
+.hovereffect .carousel {
+  position: relative;
+  border-radius: 20px;
+  height: 70vh;
+  @media (max-width: 1024px) {
+    height: 50vh;
+  }
+}

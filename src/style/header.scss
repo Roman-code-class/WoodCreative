@@ -1,0 +1,247 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 1400px;
+
+  @media #{$xlarge-only} {
+    height: 1200px;
+    // height: 765px;
+  }
+  @media #{$large-only} {
+    height: 850px;
+  }
+  @media #{$medium-only} {
+    height: 600px;
+  }
+  @media #{$small-only} {
+    height: 600px;
+  }
+  @media #{$small} {
+    height: 600px;
+  }
+}
+
+.box {
+  position: absolute;
+  top: 30%;
+  @media (max-width: 1024px) {
+    top: auto;
+  }
+}
+
+.gradient-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: rgb(5, 0, 0);
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(5, 0, 0, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(5, 0, 0, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(5, 0, 0, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050000",endColorstr="#00d4ff",GradientType=1);
+}
+
+// .bagraund-img-fixed {
+//   z-index: 1;
+//   background-image: url("../img/header.jpg");
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: center center;
+//   //   margin: 20px 0;
+// }
+
+.logo {
+  z-index: 4;
+  font-family: $fontFamily;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: $fontSizeDesct;
+  @media #{$medium-only} {
+    font-size: $fontSizeMiddle;
+  }
+  @media #{$small-only} {
+    font-size: $fontMobilSize;
+  }
+  @media #{$small} {
+    font-size: 1.5rem;
+  }
+}
+// отключение прокрутки картинки
+
+// @media (max-width: 767px) {
+//     .fix-bg {
+//         background-attachment: scroll;
+//         height: 320px;
+//     }
+// }
+
+// .twentytwenty-container {
+//   width: 400px;
+//   height: 400px;
+// }
+.contenedor-box {
+  height: 100%;
+}
+
+#contenedor {
+  background: url("../img/header.jpg") no-repeat center center; /*fondo*/
+  // height: 73.5vw;
+  margin: 1vw auto;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+#contenedor figure {
+  background-image: url("../img/header3.jpg");
+  background-size: cover;
+  font-size: 0;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  width: 100%;
+}
+
+#separador {
+  background-image: url("../img/header.jpg");
+  background-size: cover;
+  bottom: 0;
+  border-right: 5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 10px 0 15px -13px #000;
+  height: 100%;
+  max-width: 98.6%;
+  min-width: 0.6%;
+  overflow: visible;
+  position: absolute;
+  width: 50%;
+  animation: figure 2s 1 normal ease-in-out 0.1s;
+  -webkit-animation: figure 2s 1 normal ease-in-out 0.1s;
+}
+
+/*barra input */
+.contenedor-box input {
+  position: absolute;
+  z-index: 3;
+}
+
+input#deslizador {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  height: 100vw;
+  left: 0;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  position: relative;
+  top: -100vw;
+  width: 100%;
+}
+/*barra input mozilla*/
+input#deslizador::-moz-range-track {
+  background: transparent;
+}
+/*barra input ie*/
+input#deslizador::-ms-track {
+  border: none;
+  background-color: transparent;
+  height: 100vw;
+  left: 0;
+  outline: none;
+  position: relative;
+  top: -100vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+}
+input#deslizador::-ms-fill-lower {
+  background-color: transparent;
+}
+
+/*boton input chrome*/
+input#deslizador::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 100vw;
+  width: 0.5%;
+  opacity: 0;
+}
+/*boton input mozilla*/
+input#deslizador::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 100vw;
+  width: 0.5%;
+  opacity: 0;
+}
+/*boton input ie*/
+input#deslizador::-ms-thumb {
+  height: 100vw;
+  width: 0.5%;
+  opacity: 0;
+}
+input#deslizador::-ms-tooltip {
+  display: none;
+}
+
+/*flechas*/
+#separador::before {
+  background: url(https://cdn.josetxu.com/img/before-after-effect-arrows.png)
+    no-repeat scroll 0 center transparent;
+  background-size: contain;
+  content: " ";
+  float: right;
+  height: 100%;
+  margin-right: -34px;
+  position: relative;
+  top: 0;
+  width: 64px;
+  @media (max-width: 1024px) {
+    top: 70px;
+  }
+}
+
+/*animacion*/
+@keyframes figure {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+/*animacion chrome*/
+@-webkit-keyframes figure {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 50%;
+  }
+}

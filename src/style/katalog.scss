@@ -1,0 +1,178 @@
+.row {
+  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+  background-color: rgb(232, 232, 232);
+  margin: 0;
+  justify-content: space-around;
+  border-radius: 30px;
+}
+
+.gallery_product {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 300px;
+}
+
+.img-responsive {
+  background-size: cover;
+  object-fit: cover;
+  border-radius: 30px;
+  //   border: 2px solid;
+  //   border-color: #330101;
+  height: 300px;
+  width: 100%;
+}
+
+// .carousel-item-start,
+// .carousel-item-next {
+//   border-radius: 30px !important;
+// }
+
+.carousel-indicators {
+  margin-bottom: 0.2rem;
+}
+
+.katalog-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text-center {
+  }
+  @media #{$small-only} {
+    // height: 180px;
+  }
+}
+
+.katalog-title {
+  font-family: $fontFamilyDop2;
+  font-weight: 500;
+}
+.katalog-text {
+  font-family: $fontFamily;
+  max-width: 450px;
+  @media #{$large-only} {
+    width: 350px;
+  }
+  @media #{$medium-only} {
+    width: 250px;
+  }
+  @media #{$small-only} {
+    font-size: small;
+    width: 170px;
+  }
+  @media #{$small} {
+    width: 250px;
+  }
+}
+
+// При наведении
+.section-row:hover .section-col {
+  opacity: 0.5;
+  transition: transform 250ms linear, opacity 250ms ease;
+}
+.section-row .section-col:hover {
+  opacity: 1;
+}
+.section {
+  overflow: hidden;
+  cursor: pointer;
+}
+.section-in {
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.section-in {
+  transition: transform 250ms linear;
+}
+.section-col:hover .section-in {
+  // transform: scale(1.1) rotate(0deg);
+}
+
+.hover-text {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  // mix-blend-mode: difference;
+}
+.hover-text h2 {
+  font-family: $fontFamilyDop;
+  font-weight: 300;
+  font-size: 8vw;
+  line-height: 1;
+  color: #ffffff;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 250ms linear, opacity 250ms ease;
+  text-shadow: 0px 9px 20px rgba(48, 21, 13, 0.82);
+}
+.section-col:hover + .hover-text h2 {
+  opacity: 1;
+  transform: scale(1);
+  .hover-mobil-katalog {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media #{$small-only} {
+  .section-col {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .hover-text h2 {
+    font-size: 12vw;
+  }
+}
+
+.info-katalog-card {
+  display: none;
+  position: absolute;
+  top: 10px;
+  padding-left: 20px;
+  z-index: 2;
+  width: 70%;
+  border-radius: 10px;
+  backdrop-filter: blur(50px);
+  color: #ececec;
+  font-family: $fontFamilyDop;
+  -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  @media (max-width: 1024px) {
+    display: block;
+  }
+  @media (max-width: 1200px) and (orientation: landscape) {
+    display: block;
+  }
+}
+
+.katalog-adaptive {
+  @media #{$small-only} {
+    .gallery_product {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+}

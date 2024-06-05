@@ -1,0 +1,68 @@
+<div class="installation">
+  <div
+    id="montage-stages-carousel"
+    class="carousel slide"
+    data-bs-interval="false"
+  >
+    <!-- Индикаторы для каждого слайда -->
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#montage-stages-carousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#montage-stages-carousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <!-- Добавьте дополнительные кнопки, если у вас больше слайдов -->
+    </div>
+
+    <!-- Обертка для слайдов -->
+    <div class="carousel-inner">
+      <!-- Первый слайд с тремя фотографиями -->
+      <div class="carousel-item active">
+        <div class="container d-flex justify-content-center">
+          <img src="@images/do.png" class="d-block" alt="Stage 1" />
+          <img src="@images/montaj.jpg" class="d-block" alt="Stage 2" />
+          <img src="@images/posleM.jpeg" class="d-block" alt="Stage 3" />
+        </div>
+      </div>
+
+      <!-- Второй слайд с тремя фотографиями (продолжайте добавлять слайды по мере необходимости) -->
+      <div class="carousel-item">
+        <div class="container d-flex justify-content-center">
+          <img src="@images/do.png" class="d-block" alt="Stage 4" />
+          <img src="@images/montaj.jpg" class="d-block" alt="Stage 5" />
+          <img src="@images/posleM.jpeg" class="d-block" alt="Stage 6" />
+        </div>
+      </div>
+      <!-- Добавьте дополнительные .carousel-item с тремя фотографиями, если нужно больше слайдов -->
+    </div>
+
+    <!-- Управление слайдером -->
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#montage-stages-carousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#montage-stages-carousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.page8-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+// .gradient-bg {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 2;
+//   background: rgb(5, 0, 0);
+//   background: -moz-linear-gradient(
+//     180deg,
+//     rgba(5, 0, 0, 1) 0%,
+//     rgba(0, 212, 255, 0) 100%
+//   );
+//   background: -webkit-linear-gradient(
+//     180deg,
+//     rgba(5, 0, 0, 1) 0%,
+//     rgba(0, 212, 255, 0) 100%
+//   );
+//   background: linear-gradient(
+//     180deg,
+//     rgba(5, 0, 0, 1) 0%,
+//     rgba(0, 212, 255, 0) 100%
+//   );
+//   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050000",endColorstr="#00d4ff",GradientType=1);
+// }
+// .bg-page7-header {
+//   background-image: url("../img/chpu.jpg");
+//   height: 100%;
+//   position: absolute;
+//   width: 100%;
+//   z-index: 1;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-attachment: fixed;
+//   background-position: top;
+// }
+
+.services-title {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  top: 30px;
+  position: relative;
+  z-index: 3;
+}
+
+.services-title-h1 {
+  color: #150000;
+  font-size: 60px;
+  font-family: $fontFamilyDop;
+  font-weight: 600;
+}
+
+.services-title-h1 span {
+  color: #1c0000;
+  font-size: 60px;
+  font-family: $fontFamilyDop2;
+  font-weight: 300;
+}

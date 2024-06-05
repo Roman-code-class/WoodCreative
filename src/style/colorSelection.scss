@@ -1,0 +1,154 @@
+.colorSelection-container {
+  .colorSelection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 0;
+    -webkit-box-shadow: 18px 14px 76px -20px rgba(48, 0, 4, 0.75);
+    -moz-box-shadow: 18px 14px 76px -20px rgba(48, 0, 4, 0.75);
+    box-shadow: 18px 14px 76px -20px rgba(48, 0, 4, 0.75);
+    background: #ffffff;
+    border-radius: 40px;
+  }
+
+  .color-link {
+    width: 50%;
+    height: 100%;
+  }
+
+  .oil {
+    border-top-left-radius: 40px;
+  }
+  .varnish {
+    border-bottom-right-radius: 40px;
+  }
+
+  .colorSelection-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .h1 {
+      font-family: $fontFamilyDop;
+      padding-top: 10px;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #424242;
+    }
+    span {
+      font-family: $fontFamilyDop2;
+      font-size: $fontSizeDesct;
+      padding-left: 15px;
+      font-weight: 200;
+      text-transform: lowercase;
+    }
+  }
+
+  .oilBox,
+  .varnishBox {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // background: #fff;
+    border-radius: 40px;
+  }
+
+  .colorSelection .imgBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    transition: 0.3s linear;
+  }
+
+  .oil .imgBx:before {
+    content: "Амер. масло";
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 0.4;
+    font-family: $fontFamilyDop;
+    font-size: $fontSizeDesct;
+    font-weight: 400;
+    z-index: 3;
+
+    @media #{$small-only} {
+      font-size: $fontMobilSize;
+    }
+  }
+  .varnish .imgBx:before {
+    content: "Тон/лак";
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 0.4;
+    font-family: $fontFamilyDop;
+    font-size: $fontSizeDesct;
+    font-weight: 400;
+    z-index: 3;
+
+    @media #{$small-only} {
+      font-size: $fontMobilSize;
+    }
+  }
+
+  .content {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+
+    @media #{$small-only} {
+      height: auto;
+    }
+  }
+
+  .content .carousel-item img {
+    border-radius: 20px;
+  }
+
+  .oilCarusel {
+    -webkit-box-shadow: 18px 14px 76px -20px rgba(48, 0, 4, 0.75);
+    -moz-box-shadow: 18px 14px 76px -20px rgba(48, 0, 4, 0.75);
+    box-shadow: 18px 14px 76px -20px rgba(48, 0, 4, 0.75);
+    border-radius: 20px;
+  }
+
+  .oil .oilCarusel .carousel-item,
+  .varnish .oilCarusel .carousel-item {
+    font-family: $fontFamilyDop;
+  }
+
+  /* responsive */
+  @media (max-width: 1080px) {
+    .colorSelection {
+      height: auto;
+    }
+    .colorSelection .imgBx {
+      padding: 40px;
+      box-sizing: border-box;
+      width: 100% !important;
+      height: auto;
+      text-align: center;
+      overflow: hidden;
+    }
+    .colorSelection .imgBx img {
+      left: initial;
+      max-width: 100%;
+      transform: rotate(0deg);
+    }
+    .details {
+      width: 100% !important;
+      height: auto;
+      padding: 20px;
+    }
+    .colorSelection .details p {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+}

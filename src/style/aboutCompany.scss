@@ -1,0 +1,189 @@
+.intro-aboutCompany {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: $font-montserrat;
+
+  .intro-background {
+    width: 100%;
+    .responsive-image {
+      width: 100%;
+      height: 500px;
+      max-height: 500px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: top;
+      background-image: url("../img/Company2.png");
+    }
+  }
+
+  .intro-background::after {
+    // Использование псевдоэлемента для затенения
+    content: ""; // Обязательно для работы псевдоэлемента
+    position: absolute; // Расположение поверх изображения
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); // Полупрозрачный черный слой
+    z-index: 1; // Убедитесь, что он находится над изображением, но под текстом
+  }
+
+  .intro-right {
+    z-index: 2;
+    position: absolute;
+    color: white;
+    padding-left: 80vh;
+
+    h1 {
+      font-family: $font-mr-hamiltoneg;
+      font-size: 4em; // Увеличенный размер для заголовка
+      margin: 0;
+      span {
+        font-family: $fontFamilyDop;
+        font-weight: 300;
+        font-size: 1em;
+      }
+    }
+
+    p {
+      max-width: 600px;
+      margin-top: 25px;
+      font-family: $fontFamily;
+      font-weight: 300;
+      font-size: 1em; // Уменьшенный размер для подзаголовка
+    }
+  }
+}
+#company-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // .display-4 {
+  //   font-size: 3rem; // Можно подстроить размер под ваш дизайн
+  // }
+  .img-fluid {
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); // Тень
+  }
+  .lead {
+    font-family: $fontFamily;
+  }
+}
+
+#company-details {
+  .company-details-cards {
+    display: flex;
+    .card {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Анимация для эффекта при наведении
+    &:hover {
+      border-radius: 20px;
+      transform: translateY(-5px); // Подъем карточки при наведении
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); // Тень для создания "плавающего" эффекта
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-family: $fontFamilyDop;
+        font-weight: 300;
+      }
+      p {
+        font-family: $fontFamily;
+      }
+      .icon-company-container {
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon-company {
+        height: 50px;
+        width: 50px;
+        max-width: 100px;
+        &.partner {
+          height: 70px;
+          width: 70px;
+        }
+        &.production {
+          height: 70px;
+          width: 70px;
+        }
+      }
+    }
+  }
+}
+
+#contact-info {
+  .row {
+    background-color: #ffffff;
+  }
+  h2 {
+    font-family: $fontFamilyDop;
+    font-weight: 300;
+    span {
+      font-family: $fontFamilyDop2;
+      font-size: 3rem;
+    }
+  }
+  .list-group-item {
+    border: none;
+    background-color: transparent;
+  }
+  .locahion-container {
+    align-items: center;
+  }
+
+  .locahion-text {
+    text-align: right;
+    border: 5px solid rgba(36, 0, 0, 0.1);
+  }
+  .map-dop-info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .img-fluid {
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); // Тень
+    margin-bottom: 15px;
+  }
+
+  .map-dop-info-text {
+    height: 150px;
+    border: 5px solid rgba(36, 0, 0, 0.1);
+
+    border-radius: 20px;
+    padding: 10px;
+    .h1 {
+      font-weight: 300;
+      font-family: $fontFamilyDop;
+    }
+    p {
+      font-family: $fontFamily;
+    }
+    @media (max-width: 1024px) {
+      width: 430px;
+    }
+  }
+  .phone-link {
+    color: rgb(25, 0, 0);
+    text-decoration: underline solid;
+  }
+}
+
+@media (max-width: 768px) {
+  // Адаптивные стили для мобильных устройств
+}

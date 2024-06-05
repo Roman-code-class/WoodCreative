@@ -1,0 +1,84 @@
+<div class="form-body">
+  <div class="row">
+    <div class="form-holder">
+      <div class="form-content">
+        <div class="form-items">
+          <h3 class="">Есть вопросы?</h3>
+          <p>Оставьте контакты и мы перезвоним</p>
+          <form class="requires-validation" novalidate>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                placeholder="Имя"
+                required
+              />
+              <div class="valid-feedback">Готово!</div>
+              <div class="invalid-feedback">Введите корректное имя!</div>
+            </div>
+            <div class="col-md-12">
+              <!-- <input
+                class="phone-input"
+                type="text"
+                name="phone"
+                id="phone"
+                data-rule-required="true"
+                data-rule-minlength="10"
+                data-msg="Введите номер телефона"
+                placeholder="+7(000)000-00-00"
+              /> -->
+              <input
+                data-rule-required="true"
+                data-rule-minlength="10"
+                class="phone-input"
+                id="phone"
+                type="text"
+                id="phone"
+                name="phone"
+                data-msg="Введите номер телефона"
+                placeholder="+7(000)000-00-00"
+              />
+              <!-- <div class="valid-feedback">Готово!</div>
+                <div class="invalid-feedback">Введите корректный номер!</div> -->
+            </div>
+            <div class="col-md-12">
+              <textarea
+                class="form-control question-input"
+                type="text"
+                name="text"
+                placeholder="Ваш вопрос"
+                required
+              ></textarea>
+              <div class="valid-feedback">Готово!</div>
+              <div class="invalid-feedback">Вопрос не задан!</div>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="invalidCheck"
+                required
+              />
+              <label class="form-check-label"
+                >Даю согласие на обработку личных данных
+              </label>
+              <div class="invalid-feedback">Вы не дали согласия!</div>
+            </div>
+            <div class="form-button mt-3">
+              <button
+                id="submit"
+                type="submit"
+                class="btn btn-secondary btn-send"
+              >
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="img-bg-form"></div>
+</div>

@@ -1,0 +1,78 @@
+<section id="project-help" class="project-help-section">
+  <div class="container">
+    <div class="section-title h2">
+      <h2>Как мы помогаем в вашем</h2>
+      <span>проекте</span>
+    </div>
+    <ul class="project-steps">
+      <li class="step">
+        <div class="step-icon"></div>
+        <h3 class="step-title">Консультация</h3>
+        <p class="step-description">
+          Мы обсудим ваши идеи и предложим оптимальные решения для вашего
+          проекта.
+        </p>
+      </li>
+      <li class="step">
+        <div class="step-icon"></div>
+        <h3 class="step-title">Дизайн</h3>
+        <p class="step-description">
+          Наши дизайнеры разработают проект, соответствующий вашим предпочтениям
+          и техническим требованиям.
+        </p>
+      </li>
+      <li class="step">
+        <div class="step-icon"></div>
+        <h3 class="step-title">Производство</h3>
+        <p class="step-description">
+          На современном оборудовании мы изготовим качественные элементы из
+          дерева по индивидуальным размерам.
+        </p>
+      </li>
+      <li class="step">
+        <div class="step-icon"></div>
+        <h3 class="step-title">Монтаж</h3>
+        <p class="step-description">
+          Наши специалисты выполнят монтаж быстро и аккуратно, обеспечив чистоту
+          на рабочем месте.
+        </p>
+      </li>
+    </ul>
+
+    <div class="project-help-form">
+      <h3 class="form-title">Начните ваш проект с нами</h3>
+      <form action="/send-project-request" method="POST">
+        <input type="text" placeholder="Ваше имя" />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="+7 (___) ___-____"
+        />
+
+        <textarea placeholder="Опишите ваш проект..."></textarea>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="invalidCheck"
+            required
+          />
+          <label class="form-check-label"
+            >Даю согласие на обработку личных данных
+          </label>
+          <div class="invalid-feedback">Вы не дали согласия!</div>
+        </div>
+        <div class="btn-center">
+          <button
+            type="submit"
+            class="btn btn-outline-secondary justify-content-center btn-news"
+          >
+            Отправить запрос
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+.intro {
+  margin-top: 10px;
+}
+
+.tree-svg {
+  display: flex;
+  justify-content: center;
+
+  svg {
+    @media #{$small} {
+      width: 30px;
+    }
+  }
+}
+
+.intro-text {
+  display: flex;
+  justify-content: center;
+  font-family: $fontFamilyDop;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  @media #{$small} {
+    text-align: center;
+  }
+}

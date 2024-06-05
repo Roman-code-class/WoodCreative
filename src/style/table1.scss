@@ -1,0 +1,174 @@
+// .hidden-columns {
+//   display: none;
+// }
+
+.header-table-page .container {
+  position: relative;
+  z-index: 3;
+}
+
+.header-table-page .tree-svg {
+  margin-bottom: 25px;
+}
+
+.header-img-page {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  // height: 110vh;
+  height: 0;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img1 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 110vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/Gallerie3.jpeg");
+}
+
+.img2 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 110vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/st3.jpg");
+}
+.img3 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 110vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/meb5.jpg");
+}
+.img4 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 110vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/peregorod5.jpg");
+}
+.img5 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 125vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/peregorod6.jpg");
+}
+.img6 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 125vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/header3.jpg");
+}
+.img7 {
+  animation: ani 2.5s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 110vh;
+  z-index: 0;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/3dpanel5.webp");
+}
+
+.header-table-page .intro {
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+.table-page {
+  border-radius: 20px;
+  // background-color: rgba(33, 0, 0, 0.5);
+  background-color: #fff;
+}
+
+.table-page .table {
+  table-layout: fixed;
+  font-family: $fontFamily;
+}
+
+.table-page .table thead th {
+  font-family: $fontFamilyDop;
+  font-weight: 400;
+}
+
+.table-page .table tbody {
+  font-family: $fontFamily;
+}
+// .title-teble {
+//   border-radius: 20px;
+//   display: flex;
+//   justify-content: center;
+// }
+
+.header-table-page .accordion {
+  color: #fff;
+  --bs-accordion-color: #fff;
+}
+
+.accordion-header-adaptive {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-flush > .accordion-item > .accordion-header .accordion-button,
+.accordion-flush
+  > .accordion-item
+  > .accordion-header
+  .accordion-button.collapsed {
+  border-top-left-radius: 20px;
+}
+
+.table-page .accordion-button {
+  margin: 0;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 5px;
+  // border-radius: 20px;
+  display: flex;
+  font-family: $fontFamily;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #ffffff;
+}
+.accordion button:hover::after,
+.accordion button:focus::after {
+  border: none;
+}
+
+.table > :not(caption) > * > * {
+  color: #fff;
+}
+
+.dop-table-text {
+  font-family: $fontFamily;
+}
+
+.dop-table-text-title {
+  font-family: $fontFamilyDop;
+  font-weight: 300;
+}

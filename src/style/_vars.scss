@@ -1,0 +1,41 @@
+$fontFamily: "Montserrat"; // Шрифт по умолчанию
+$fontFamilyDop: "Oswald"; // Доп шрифт
+$fontFamilyDop2: "mr_HamiltoneG"; // Доп шрифт 2
+
+// Заголовок хедера
+$fontSizeDesct: 4rem;
+$fontSizeMiddle: 3rem;
+$fontMobilSize: 2rem;
+
+// заголовок блока
+
+$carousel-indicator-width: 10px;
+:root {
+  --bs-body-bg: none;
+}
+
+$container-max-widths: (
+  sm: 530px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$xDesct: 1400px;
+$ipadPro: 1030px;
+$desct: 990px;
+$planhet: 770px;
+$mobil: 580px;
+
+// $small: "screen";
+$small: "screen and (max-width: 22.9375em)"; // 0 - 350
+$small-only: "screen and (min-width: 22.9375em) and (max-width: 47.9375em)"; // 350 - 760
+$medium: "screen and (min-width: 48em)"; // 770 - выше
+$medium-only: "screen and (min-width: 48em) and (max-width: 64em)"; // 770 - 1024
+$large: "screen and (min-width: 64.0625em)"; // 1024 - выше
+$large-only: "screen and (min-width: 64.0625em) and (max-width: 90em)"; // 1024 - 1450
+$xlarge: "screen and (min-width: 90.0625em)"; // 1450 - выше
+$xlarge-only: "screen and (min-width: 90.0625em) and (max-width: 120em)"; // 1450 - 1920
+$xxlarge: "screen and (min-width: 120.0625em)"; // 1920 - выше
+$xxlarge-only: "screen and (min-width: 120.0625em) and (max-width: 99999999em)"; // 1920 - макси

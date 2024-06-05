@@ -1,0 +1,172 @@
+.contact-info {
+  // Определите цвета и шрифты, соответствующие вашей теме
+  $primary-color: #5a5a5a; // Пример цвета, замените на актуальный цвет темы
+  $secondary-color: #cecece; // Чуть более светлый оттенок для второстепенных элементов
+  $font-family-base: "Montserrat", sans-serif; // Используем шрифт в соответствии с вашими импортами
+
+  // Общие стили label-company для ссылок
+  .label-company {
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover {
+        color: darken($primary-color, 80%);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Основные стили для блока контактной информации
+
+  .row {
+    background-color: #fff;
+    @media (max-width: 991.98px) {
+      // Bootstrap breakpoint для устройств меньше "large"
+      justify-content: center;
+    }
+
+    .col-lg-4 {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      margin-bottom: 2rem;
+
+      @media (min-width: 992px) {
+        // Bootstrap breakpoint для устройств "large" и более
+        align-items: flex-start;
+      }
+
+      .label-company {
+        padding: 0.5rem 1rem;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: 992px) {
+          padding-left: 0;
+        }
+      }
+
+      .card {
+        max-width: 100%; // Адаптивность под ширину экрана
+        line-height: 1.5; // По умолчанию для улучшенной читаемости
+
+        .card-body {
+          padding: 2rem;
+
+          .card-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.5rem; // Увеличенный размер для названия компании
+            color: $primary-color;
+          }
+
+          .card-subtitle {
+            margin-bottom: 1rem;
+            color: $secondary-color;
+          }
+
+          .card-text {
+            b {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      // Иконки
+      i.fa-solid.fa-at {
+        font-size: 2rem; // Повышаем размер иконок
+        color: $primary-color;
+      }
+    }
+  }
+
+  $background-color-card: #fff; // Вы можете заменить это на любой цвет, который лучше подходит для вашего дизайна
+  $border-color-card: #ddd; // Цвет границы карточек
+  $text-color: #333; // Основной текстовый цвет
+  $primary-color: #5a5a5a; // Основной цвет вашего проекта - используйте актуальный цвет из вашего проекта
+  $link-color: #0069d9; // Цвет ссылок (поменять на актуальный, если нужно)
+  $font-stack: "Roboto", sans-serif; // Шрифт, используемый в проекте
+
+  // Вспомогательный класс для создания карточек
+  .card-style {
+    background-color: $background-color-card;
+    border: 1px solid $border-color-card;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .card-style:hover .contact-info-icon svg {
+    fill: antiquewhite;
+  }
+
+  // Теперь применим эти стили к колонкам
+  .col-lg-4 {
+    // Переопределение расстояний для адаптации карточек
+    @include media-breakpoint-up(lg) {
+      padding: 0 15px;
+    }
+
+    // Применение общего стиля карточек
+    @extend .card-style;
+
+    // Стилизация конкретных элементов внутри карточек
+    .label-company {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $fontFamily;
+      @extend .label-company;
+    }
+
+    i.fa-solid.fa-at {
+      @extend .icon;
+    }
+  }
+
+  // Особенные стили для разных типов текста, если это необходимо
+  .p-1 {
+    font-family: $fontFamilyDop;
+    font-weight: 200;
+    padding: 0.5rem 1rem; // Используйте размеры в соответствии с вашим дизайном
+  }
+
+  .contact-info-icon {
+    opacity: 0.7;
+    height: 50px;
+    width: 50px;
+  }
+
+  .card-body {
+    h5 {
+      font-family: $fontFamilyDop;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    h6 {
+      font-family: $fontFamily;
+      span {
+        font-family: $fontFamilyDop;
+        font-weight: 300;
+      }
+    }
+    .card-text {
+      b {
+        font-family: $fontFamilyDop;
+        font-weight: 400;
+      }
+      font-family: $fontFamily;
+    }
+  }
+}

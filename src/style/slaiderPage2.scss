@@ -1,0 +1,54 @@
+.container-slaiderPage2 {
+  display: flex;
+  justify-content: center;
+}
+
+.slaiderPage2 {
+  width: 85%;
+
+  @media #{$small-only} {
+    width: 100%;
+  }
+}
+
+.slaiderPage2-glide {
+  border-radius: 30px;
+}
+
+.flex-img-center {
+  display: flex;
+  justify-content: center;
+}
+.img-slaider-portfolio-page2 {
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 700px;
+
+  @media #{$small-only} {
+    height: 50vh;
+  }
+}
+
+.slaider-portfolio-page2-button {
+  width: 100px;
+  height: 70px;
+
+  @media #{$small-only} {
+    width: 60px;
+    height: 50px;
+  }
+}
+
+.img-slaider-portfolio-page2-button {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.glide__arrows {
+  @media #{$small-only} {
+    display: none;
+  }
+}

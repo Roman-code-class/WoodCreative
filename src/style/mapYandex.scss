@@ -1,0 +1,85 @@
+.mapYandex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+
+  @media (max-width: 800px) {
+    flex-flow: column;
+  }
+
+  @media (max-width: $mobil) {
+    height: 80vh;
+  }
+}
+
+.mapYandex iframe {
+  // -webkit-box-shadow: -14px 21px 66px 7px rgba(48, 0, 4, 0.55);
+  // -moz-box-shadow: -14px 21px 66px 7px rgba(48, 0, 4, 0.55);
+  // box-shadow: -14px 21px 66px 7px rgba(48, 0, 4, 0.55);
+  // border-radius: 30px;
+}
+
+.mapYandex .map {
+  width: 50%;
+  height: 350px;
+  -webkit-box-shadow: 18px 14px 27px -18px rgba(48, 0, 4, 0.75);
+  -moz-box-shadow: 18px 14px 27px -18px rgba(48, 0, 4, 0.75);
+  box-shadow: 18px 14px 27px -18px rgba(48, 0, 4, 0.75);
+  border-radius: 30px;
+
+  .mapMap {
+    height: 100%;
+  }
+
+  @media (max-width: $mobil) {
+    width: 90%;
+    height: 40vh;
+    margin-bottom: 1rem;
+  }
+}
+
+.locahion-container {
+  height: 100%;
+  position: relative;
+
+  .sticker {
+    max-width: 550px;
+    height: auto;
+    @media (max-width: $ipadPro) {
+      max-width: 420px;
+    }
+    @media (max-width: $planhet) {
+      position: absolute;
+    }
+    @media (max-width: $mobil) {
+      width: 320px;
+      position: relative;
+    }
+  }
+}
+
+.locahion-text {
+  margin-left: 1rem;
+  height: 150px;
+  max-width: 600px;
+  border: 5px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  .h2 {
+    font-family: $fontFamilyDop;
+    font-weight: 300;
+  }
+  .h6 {
+    font-family: $fontFamily;
+    font-weight: 300;
+  }
+  // @media (max-width: $ipadPro) {
+  //   width: 430px;
+  // }
+  @media (max-width: $mobil) {
+    width: 300px;
+    height: 220px;
+  }
+}

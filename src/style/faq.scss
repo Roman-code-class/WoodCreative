@@ -1,0 +1,307 @@
+$bg: #fff;
+$text: #1a0000;
+$gray: #320101;
+$lightgray: #4a0000;
+$blue: #410000;
+
+.faq {
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  .faq-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .faq-title h2 {
+    padding-top: 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #424242;
+    font-family: $fontFamilyDop;
+  }
+
+  .faq-title span {
+    font-family: $fontFamilyDop2;
+    font-size: 60px;
+    padding-left: 15px;
+    text-transform: lowercase;
+  }
+
+  .accordion {
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid $lightgray;
+      button[aria-expanded="true"] {
+        border-bottom: 1px solid $blue;
+      }
+    }
+    button {
+      position: relative;
+      display: block;
+      text-align: left;
+      width: 100%;
+      padding: 1em 0;
+      color: $text;
+      font-size: 1.15rem;
+      font-weight: 400;
+      border: none;
+      background: none;
+      outline: none;
+      &:hover,
+      &:focus {
+        cursor: pointer;
+        color: $blue;
+        &::after {
+          cursor: pointer;
+          color: $blue;
+          border: 1px solid $blue;
+        }
+      }
+      .accordion-title {
+        font-family: $fontFamily;
+        padding: 1em 1.5em 1em 0;
+      }
+      .icon {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        border: 1px solid;
+        border-radius: 22px;
+        &::before {
+          display: block;
+          position: absolute;
+          content: "";
+          top: 9px;
+          left: 5px;
+          width: 10px;
+          height: 2px;
+          background: currentColor;
+        }
+        &::after {
+          display: block;
+          position: absolute;
+          content: "";
+          top: 5px;
+          left: 9px;
+          width: 2px;
+          height: 10px;
+          background: currentColor;
+        }
+      }
+    }
+    button[aria-expanded="true"] {
+      color: $blue;
+      .icon {
+        &::after {
+          width: 0;
+        }
+      }
+      + .accordion-content {
+        opacity: 1;
+        max-height: 23em;
+        transition: all 200ms linear;
+        will-change: opacity, max-height;
+        &.accordion-img-content {
+          max-height: 400px;
+        }
+        &.content-delivery {
+          max-height: 600px;
+        }
+      }
+    }
+    .accordion-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 200ms linear, max-height 200ms linear;
+      will-change: opacity, max-height;
+      .content-text {
+        margin: 1.5em 0;
+      }
+      h6 {
+        letter-spacing: 0.1rem;
+        font-size: 1.3rem;
+        font-family: $fontFamilyDop;
+        font-weight: 400;
+      }
+      p {
+        margin-top: 16px;
+        font-family: $fontFamily;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+      a {
+        font-weight: 600;
+        color: #8d6102;
+      }
+    }
+  }
+
+  //
+  @mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-img {
+    @include flex-center;
+  }
+  /*
+ * Start
+*/
+
+  .glassBox {
+    &,
+    & * {
+      box-sizing: border-box;
+      transition: 400ms;
+    }
+    width: 100%;
+    max-width: 300px;
+    //   border-radius: 5px;
+    //   background: rgba(255, 255, 255, 0.05);
+    //   backdrop-filter: blur(2px);
+    //   border: 1px solid rgba(255, 255, 255, 0.2);
+    //   border-right-color: rgba(255, 255, 255, 0.1);
+    //   border-bottom-color: rgba(255, 255, 255, 0.1);
+    //   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: relative;
+    @include flex-center;
+    flex-direction: column;
+    &__imgBox {
+      img {
+        display: block;
+        width: 100%;
+        height: 200px;
+
+        @media (max-width: $planhet) {
+          height: auto;
+        }
+      }
+    }
+    &__title {
+      text-align: center;
+      margin-top: 15px;
+      color: #170000;
+      font-size: 20px;
+      font-weight: 400;
+      font-family: $fontFamily;
+    }
+    &:hover &__imgBox {
+      transform: translateY(-5px);
+    }
+    &:hover &__imgBox img {
+      transform: translate(-5px, -10px) scale(1.1);
+    }
+    &:hover &__title {
+      //margin-top: 40px;
+    }
+  }
+
+  //
+  .content-text-delivery {
+    margin-top: 15px;
+    color: #170000;
+  }
+  /* Timeline holder */
+  ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  /* Timeline vertical line */
+  ul.timeline:before {
+    content: " ";
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: 100%;
+    z-index: 400;
+    border-radius: 1rem;
+  }
+
+  li.timeline-item {
+    margin: 10px 0;
+
+    .dop-info {
+      font-size: small;
+    }
+  }
+  li.timeline-item h2,
+  li.timeline-item span {
+    font-family: $fontFamily;
+    font-size: medium;
+  }
+  /* Timeline item arrow */
+  .timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+  }
+
+  /* Timeline item circle marker */
+  li.timeline-item::before {
+    content: " ";
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(49, 0, 0, 0.37);
+  }
+
+  //
+  .accordion-faq {
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .accordion-item.is-visible {
+    transform: translateY(-20%);
+    animation: ani 1s forwards;
+    display: block;
+
+    @keyframes ani {
+      0% {
+        transform: translateY(-20%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .btn-centr {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .show-more {
+  }
+
+  .show-more:active,
+  .show-more:hover {
+    background-color: #170000;
+  }
+}

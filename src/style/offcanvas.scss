@@ -1,0 +1,49 @@
+.offcanvasOne {
+  button {
+    font-size: medium;
+    font-family: $fontFamilyDop;
+    font-weight: 200;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  button:hover {
+    color: #fff;
+    background-color: #1b0000;
+  }
+
+  button:focus-visible {
+    color: #fff;
+    background-color: #1b0000;
+  }
+
+  .offcanvas-body {
+    font-family: $fontFamily;
+    color: #fff;
+  }
+
+  .offcanvas-body span {
+    // text-decoration: underline;
+    // backdrop-filter: blur(50px);
+    background-color: rgb(255, 255, 255, 0.3);
+  }
+  .btn-dark {
+    --bs-btn-hover-bg: #ffffff;
+  }
+}
+
+.bg-offcanvas {
+  animation: myAnimMore 3s ease 0s 1 normal forwards;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-offcanvas-img {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/Gallerie5.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

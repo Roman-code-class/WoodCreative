@@ -1,0 +1,14 @@
+.priceMin {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.priceMin-title {
+  font-weight: 300;
+  font-family: $fontFamilyDop;
+}
+
+.priceMin-title span {
+  font-family: $fontFamilyDop2;
+  font-size: larger;
+}

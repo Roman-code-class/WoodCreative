@@ -1,0 +1,148 @@
+.project-help-section {
+  background: #f9f9f9;
+  padding: 60px 0;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    .section-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-family: $fontFamilyDop;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        color: #333;
+        text-align: center;
+      }
+      span {
+        padding-left: 10px;
+        text-transform: lowercase;
+        font-family: $fontFamilyDop2;
+        font-size: 3.5rem;
+      }
+    }
+
+    .project-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .step {
+        border-radius: 20px;
+        width: 23%; // Adjust the width for responsive if needed
+        background: #fff;
+        padding: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        .step-icon {
+          width: 60px;
+          margin: 0 auto 20px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .step-title {
+          font-family: $fontFamilyDop;
+          font-weight: 300;
+          font-size: 1.5rem;
+          margin: 0 0 15px;
+          color: #555;
+        }
+
+        .step-description {
+          font-family: $fontFamily;
+          font-size: 0.8rem;
+          line-height: 1.5;
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+.project-help-form {
+  border-radius: 20px;
+  background-color: #f7f7f7; // Светлый фон для формы
+  padding: 40px; // Внутренние отступы
+  border-radius: 10px; // Скругление углов формы
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Тень для формы
+  max-width: 400px; // Максимальная ширина формы
+  margin: auto; // Центровка формы
+
+  .form-title {
+    font-family: $font-oswald;
+    font-weight: 300;
+    color: #333; // Цвет текста
+    margin-bottom: 20px; // Отступ после заголовка
+    text-transform: uppercase; // Текст заглавными буквами
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    width: 100%; // Ширина на всю форму
+    padding: 10px; // Внутренние отступы
+    margin-bottom: 15px; // Отступ между полями
+    border: 1px solid #ddd; // Граница
+    border-radius: 5px; // Скругление углов поля
+    box-sizing: border-box; // Box-sizing для правильного расчета ширины
+    font-family: $font-montserrat;
+
+    &::placeholder {
+      color: #888; // Цвет плейсхолдера
+    }
+
+    &:focus {
+      border-color: #a0a0a0; // Цвет границы при фокусе
+      outline: none; // Убрать стандартную рамку фокуса
+    }
+  }
+
+  .submit-btn {
+    justify-content: center;
+    width: 50%; // Ширина
+    padding: 10px; // Внутренние отступы
+    border: none; // Без рамки
+    border-radius: 5px; // Скругление углов кнопки
+    background-color: #333; // Фон кнопки
+    color: white; // Цвет текста кнопки
+    font-family: $font-montserrat;
+    font-size: 1em;
+    cursor: pointer; // Курсор в виде указателя
+    transition: background-color 0.3s; // Анимация фона кнопки
+
+    &:hover {
+      background-color: #555; // Смена цвета фона кнопки при наведении
+    }
+  }
+}
+
+// Медиазапросы для адаптивности
+@media (max-width: 768px) {
+  .help-section .timeline {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .project-help-form {
+    padding: 20px; // Уменьшаем внутренние отступы на мобильных устройствах
+  }
+}
