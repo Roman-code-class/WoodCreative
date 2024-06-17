@@ -3,7 +3,12 @@
   .row {
     background-color: #ffffff;
   }
-
+  .adaptive-filter-buttons {
+    @media #{$small-only} {
+      display: flex;
+      flex-direction: column;
+    }
+  }
   .gallery-title {
     font-family: $fontFamily;
     color: #000000;
@@ -29,6 +34,9 @@
     text-align: center;
     color: #000000;
     margin-bottom: 10px;
+    @media #{$small-only} {
+      margin-bottom: 0;
+    }
   }
   .filter-button:hover {
     font-size: 18px;
@@ -54,6 +62,16 @@
     margin-right: 10px;
     &:last-child {
       margin-right: 0;
+    }
+
+    @media #{$large} {
+      width: 16.66666%; /* 6 карточек в ряд */
+    }
+    @media #{$medium-only} {
+      width: 25%; /* 4 карточки в ряду */
+    }
+    @media #{$small-only} {
+      width: 40%; /* 2 карточки в ряд */
     }
   }
 
@@ -94,24 +112,5 @@
   }
 
   .btn-visible {
-  }
-  //
-
-  @media only screen and (min-width: 1200px) {
-    .gallery_product {
-      width: 16.66666%; /* 6 карточек в ряд */
-    }
-  }
-
-  @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    .gallery_product {
-      width: 25%; /* 4 карточки в ряду */
-    }
-  }
-
-  @media only screen and (max-width: 991px) {
-    .gallery_product {
-      width: 50%; /* 2 карточки в ряд */
-    }
   }
 }

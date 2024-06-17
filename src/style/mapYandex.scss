@@ -5,12 +5,13 @@
   margin-top: 30px;
   margin-bottom: 15px;
 
-  @media (max-width: 800px) {
+  @media #{$small-only} {
     flex-flow: column;
+    height: 47vh;
   }
-
-  @media (max-width: $mobil) {
-    height: 80vh;
+  @media #{$small} {
+    flex-flow: column;
+    height: 45vh;
   }
 }
 
@@ -29,14 +30,17 @@
   box-shadow: 18px 14px 27px -18px rgba(48, 0, 4, 0.75);
   border-radius: 30px;
 
-  .mapMap {
+  @media #{$small-only} {
+    width: 100%;
+    height: 100%;
+  }
+  @media #{$small} {
+    width: 100%;
     height: 100%;
   }
 
-  @media (max-width: $mobil) {
-    width: 90%;
-    height: 40vh;
-    margin-bottom: 1rem;
+  .mapMap {
+    height: 100%;
   }
 }
 
@@ -44,18 +48,28 @@
   height: 100%;
   position: relative;
 
+  @media #{$small-only} {
+    margin-top: 2rem;
+  }
   .sticker {
     max-width: 550px;
     height: auto;
-    @media (max-width: $ipadPro) {
+    @media #{$medium-only} {
       max-width: 420px;
     }
-    @media (max-width: $planhet) {
+    @media #{$small-only} {
       position: absolute;
+      top: 7rem;
+      left: auto;
+      right: 0;
+      width: 100%;
     }
-    @media (max-width: $mobil) {
-      width: 320px;
-      position: relative;
+    @media #{$small} {
+      position: absolute;
+      top: 13rem;
+      left: auto;
+      right: 0;
+      width: 100%;
     }
   }
 }
@@ -75,11 +89,17 @@
     font-family: $fontFamily;
     font-weight: 300;
   }
-  // @media (max-width: $ipadPro) {
-  //   width: 430px;
-  // }
-  @media (max-width: $mobil) {
-    width: 300px;
-    height: 220px;
+  @media #{$small-only} {
+    position: relative;
+    z-index: 3;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  @media #{$small} {
+    position: relative;
+    z-index: 3;
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 200px;
   }
 }

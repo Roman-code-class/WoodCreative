@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap");
-
 :root {
   --color-tan: rgba(255, 255, 255);
   // --color-tan: rgb(232, 232, 232, 0.5);
@@ -17,7 +15,6 @@
   --nav-item-hover-offset: 5%;
   --easing: cubic-bezier(0.8, 0, 0.2, 1);
   --duration: 0.6s;
-  font-family: "Libre Baskerville", serif;
 }
 
 .lineBar {
@@ -28,15 +25,46 @@
   //   box-sizing: border-box;
   //   position: relative;
   // }
+  @media #{$medium-only} {
+    height: 100px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+  @media #{$small-only} {
+    height: 100px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  .lineBar-number {
+    font-family: $fontFamily;
+    padding-left: 12px;
+    @media #{$medium-only} {
+      font-size: 3rem;
+      padding-left: 2rem;
+    }
+    @media #{$small-only} {
+      font-size: 3rem;
+      padding-left: 2rem;
+    }
+  }
 
   .bar-navigation {
     position: relative;
-    height: 50vh;
+    height: 100%;
     width: 100vw;
     background-color: var(--color-tan);
     display: grid;
     grid-template-rows: 100%;
     overflow: hidden;
+    @media #{$medium-only} {
+      width: 100%;
+    }
+    @media #{$small-only} {
+      width: 100%;
+    }
   }
 
   .lineBar {
@@ -65,6 +93,12 @@
     display: grid;
     height: 100%;
     counter-reset: list;
+    @media #{$medium-only} {
+      display: none;
+    }
+    @media #{$small-only} {
+      display: none;
+    }
   }
 
   .nav-item {
@@ -180,13 +214,36 @@
     color: #000000;
     font-family: $fontFamilyDop;
     font-weight: 300;
+
+    @media #{$large-only} {
+      right: 3%;
+    }
+    @media #{$medium-only} {
+      width: 85%;
+      left: 10%;
+      // transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      text-align: left;
+      padding-left: 2rem;
+    }
+    @media #{$small-only} {
+      width: 85%;
+      left: 10%;
+      // transform: translateX(-50%);
+      top: 0;
+      bottom: 0;
+      text-align: left;
+      padding-left: 2rem;
+    }
   }
 
   .bar-content {
+    width: 100%;
     color: rgb(0, 0, 0);
     z-index: 3;
     margin-left: 50px;
-    margin-top: -100px;
+    margin-top: -50px;
   }
   .bar-title {
     font-family: $fontFamilyDop;
@@ -195,5 +252,43 @@
   .bar-text {
     font-family: $fontFamily;
     font-weight: 300;
+  }
+
+  .btn-mobil-more {
+    display: none;
+
+    @media #{$medium-only} {
+      margin-top: 1rem;
+      padding-right: 12rem;
+      display: flex;
+      justify-content: center;
+    }
+    @media #{$small-only} {
+      margin-top: 1rem;
+      padding-right: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-check:checked + .btn,
+    :not(.btn-check) + .btn:active,
+    .btn:first-child:active,
+    .btn.active,
+    .btn.show {
+      background-color: #410000;
+    }
+
+    .modal-content {
+      background-color: white;
+      -webkit-box-shadow: 0px 0px 70px -11px rgba(0, 0, 0, 1);
+      -moz-box-shadow: 0px 0px 70px -11px rgba(0, 0, 0, 1);
+      box-shadow: 0px 0px 70px -11px rgba(0, 0, 0, 1);
+    }
+    .modal-header {
+      border-color: #410000;
+    }
+    .modal-footer {
+      border-color: #410000;
+    }
   }
 }

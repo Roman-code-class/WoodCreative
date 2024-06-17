@@ -1,7 +1,7 @@
 // @import "./style/normalize";
 @import "./style/reset";
-@import "./style/vars";
 @import "~bootstrap/scss/bootstrap";
+@import "./style/vars";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
 @import "./style/Montserrat";
@@ -32,7 +32,6 @@
 @import "./style/header11.scss";
 @import "./style/header12.scss";
 @import "./style/ourNews2.scss";
-@import "./style/table1.scss";
 @import "./style/steps.scss";
 @import "./style/offcanvas.scss";
 @import "./style/priceMin.scss";
@@ -44,3 +43,4 @@
 @import "./style/installation.scss";
 @import "./style/aboutCompany.scss";
 @import "./style/infoBlock.scss";
+@import "./style/table1.scss";

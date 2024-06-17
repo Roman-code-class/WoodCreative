@@ -39,3 +39,10 @@ $xlarge: "screen and (min-width: 90.0625em)"; // 1450 - выше
 $xlarge-only: "screen and (min-width: 90.0625em) and (max-width: 120em)"; // 1450 - 1920
 $xxlarge: "screen and (min-width: 120.0625em)"; // 1920 - выше
 $xxlarge-only: "screen and (min-width: 120.0625em) and (max-width: 99999999em)"; // 1920 - макси
+
+// Спрятать модпльное окно при разрешении экрана -
+// .modal-backdrop.show {
+//   @media #{$large} {
+//     display: none;
+//   }
+// }

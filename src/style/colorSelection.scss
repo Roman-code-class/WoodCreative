@@ -99,7 +99,7 @@
 
   .content {
     width: 400px;
-    height: 400px;
+    height: auto;
     padding: 20px;
 
     @media #{$small-only} {

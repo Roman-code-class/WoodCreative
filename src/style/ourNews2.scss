@@ -1,6 +1,6 @@
 .ourNews {
   margin-bottom: 50px;
-  @media (max-width: 800px) {
+  @media #{$small-only} {
     margin-top: 20px;
   }
 }
@@ -24,8 +24,14 @@
   -webkit-box-shadow: 7px 19px 29px -4px rgba(48, 0, 4, 1);
   -moz-box-shadow: 7px 19px 29px -4px rgba(48, 0, 4, 1);
   box-shadow: 7px 19px 29px -4px rgba(48, 0, 4, 1);
-  @media (max-width: 1024px) {
-    height: 50vh;
+  @media #{$large-only} {
+    height: 40vh;
+  }
+  @media #{$medium-only} {
+    height: 30vh;
+  }
+  @media #{$small-only} {
+    height: 30vh;
   }
 }
 
@@ -200,25 +206,59 @@
 .hovereffect .carousel .carousel-inner {
   border-radius: 20px;
   height: 70vh;
-  @media (max-width: 1024px) {
-    height: 50vh;
+  @media #{$large-only} {
+    height: 40vh;
+  }
+  @media #{$medium-only} {
+    height: 30vh;
+  }
+  @media #{$small-only} {
+    height: 30vh;
   }
 }
 
 .hovereffect .carousel-item img {
   border-radius: 20px;
   height: 70vh;
+  @media #{$large-only} {
+    height: 40vh;
+  }
+  @media #{$medium-only} {
+    height: 30vh;
+  }
+  @media #{$small-only} {
+    height: 30vh;
+  }
 }
 .hovereffect .carousel-item {
   border-radius: 20px;
   height: 70vh;
+  @media #{$large-only} {
+    height: 40vh;
+  }
+  @media #{$medium-only} {
+    height: 30vh;
+  }
+  @media #{$small-only} {
+    height: 30vh;
+  }
 }
 
 .hovereffect .carousel {
   position: relative;
   border-radius: 20px;
   height: 70vh;
-  @media (max-width: 1024px) {
-    height: 50vh;
+  @media #{$large-only} {
+    height: 40vh;
   }
+  @media #{$medium-only} {
+    height: 30vh;
+  }
+  @media #{$small-only} {
+    height: 30vh;
+  }
+}
+
+.ourNews .btn-center {
+  margin-top: 1rem;
 }

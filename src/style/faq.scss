@@ -103,7 +103,7 @@ $blue: #410000;
       }
       + .accordion-content {
         opacity: 1;
-        max-height: 23em;
+        max-height: 30em;
         transition: all 200ms linear;
         will-change: opacity, max-height;
         &.accordion-img-content {

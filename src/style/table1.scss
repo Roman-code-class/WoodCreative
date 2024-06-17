@@ -1,14 +1,17 @@
 // .hidden-columns {
 //   display: none;
 // }
-
+#flush-collapseSix .accordion-body {
+  background-color: transparent !important;
+}
 .header-table-page .container {
   position: relative;
   z-index: 3;
 }
 
 .header-table-page .tree-svg {
-  margin-bottom: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .header-img-page {

@@ -1,5 +1,13 @@
 .colon {
   margin-top: 15px;
+  @media #{$small-only} {
+    padding-left: 2.5rem;
+    margin-top: 0;
+  }
+  @media #{$small} {
+    padding-left: 2rem;
+    margin-top: 0;
+  }
 }
 
 .widget-title {
@@ -28,12 +36,24 @@ address {
 }
 
 .footer-logo {
-  @media (max-width: $mobil) {
+}
+
+.widget-logo-footer {
+  @media #{$small-only} {
+    display: flex;
+    justify-content: center;
+  }
+  @media #{$small} {
+    display: flex;
+    justify-content: center;
   }
 }
 
 .logo-footer {
-  @media (max-width: $mobil) {
-    width: 40vh;
+  @media #{$small-only} {
+    width: 20vh;
+  }
+  @media #{$small} {
+    width: 15vh;
   }
 }
