@@ -1,6 +1,15 @@
-// .hidden-columns {
-//   display: none;
-// }
+.accordion-collapse {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-collapse.show {
+  max-height: 130vh;
+  // height: auto; /* Меняйте на фиксированное значение, если auto не работает */
+  opacity: 1;
+}
+
 #flush-collapseSix .accordion-body {
   background-color: transparent !important;
 }
@@ -15,10 +24,11 @@
 }
 
 .header-img-page {
-  animation: ani 2.5s ease 0s 1 normal forwards;
+  // transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden; /* Убедитесь, что контент, выходящий за пределы блока, скрыт */
   width: 100%;
-  // height: 110vh;
-  height: 0;
   z-index: 0;
   position: absolute;
   background-repeat: no-repeat;
@@ -26,75 +36,40 @@
 }
 
 .img1 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 110vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/Gallerie3.jpeg");
+  background-image: url("../img/tableImg/table1.jpg");
 }
 
 .img2 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 110vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/st3.jpg");
+  background-image: url("../img/tableImg/table2.jpg");
 }
 .img3 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 110vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/meb5.jpg");
+  background-image: url("../img/tableImg/table3.jpg");
 }
 .img4 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 110vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/peregorod5.jpg");
+  background-image: url("../img/tableImg/table4.webp");
 }
 .img5 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 125vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/peregorod6.jpg");
+  background-image: url("../img/tableImg/table5.webp");
 }
 .img6 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 125vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/header3.jpg");
+  background-image: url("../img/tableImg/table6.webp");
 }
 .img7 {
-  animation: ani 2.5s ease 0s 1 normal forwards;
-  width: 100%;
+  opacity: 1;
   height: 110vh;
-  z-index: 0;
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../img/3dpanel5.webp");
+  background-image: url("../img/tableImg/table7.webp");
 }
 
 .header-table-page .intro {
@@ -104,7 +79,7 @@
 
 .table-page {
   border-radius: 20px;
-  // background-color: rgba(33, 0, 0, 0.5);
+  // background-color: rgba(255, 255, 255, 0.333);
   background-color: #fff;
 }
 

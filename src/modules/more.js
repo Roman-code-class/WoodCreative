@@ -1,91 +1,139 @@
-// window.onload = function () {
-//   var oilCards = document.querySelectorAll(".filter.oil");
-//   var lackCards = document.querySelectorAll(".filter.lack");
+// 1
+// document.addEventListener("DOMContentLoaded", function () {
+//   const toggleButton = document.getElementById("toggle-button");
+//   const buttonText = document.getElementById("button-text"); // Получаем текст кнопки отдельно
+//   const toggleItems = document.querySelectorAll(".toggle-item");
+//   const arrowLine = document.querySelector(".arrowLine");
 
-//   for (var i = 0; i < 8; i++) {
-//     oilCards[i].classList.remove("hidden");
-//     lackCards[i].classList.remove("hidden");
-//   }
-// };
-
-document.getElementById("load-more-oil").addEventListener("click", function () {
-  var oilCards = document.querySelectorAll(".filter.oil.hidden");
-  for (var i = 0; i < 10 && i < oilCards.length; i++) {
-    oilCards[i].classList.remove("hidden");
-  }
-});
-
-document
-  .getElementById("load-more-lack")
-  .addEventListener("click", function () {
-    var lackCards = document.querySelectorAll(".filter.lack.hidden");
-    for (var i = 0; i < 10 && i < lackCards.length; i++) {
-      lackCards[i].classList.remove("hidden");
-    }
-  });
-
-// Load more button for oil products
-document.getElementById("load-more-oil").addEventListener("click", function () {
-  // Select all hidden oil product cards and display 6 of them
-  let hiddenOilCards = document.querySelectorAll(
-    ".gallery_product.filter.oil.hidden"
-  );
-  for (let i = 0; i < 0 && i < hiddenOilCards.length; i++) {
-    hiddenOilCards[i].style.display = "block";
-  }
-
-  // Check if there are hidden oil cards left
-  if (hiddenOilCards.length === 0) {
-    // Remove the load more button
-    this.style.display = "none";
-  }
-});
-
-// Load more button for lack products
-document
-  .getElementById("load-more-lack")
-  .addEventListener("click", function () {
-    // Select all hidden lack product cards and display 6 of them
-    let hiddenLackCards = document.querySelectorAll(
-      ".gallery_product.filter.lack.hidden"
-    );
-    for (let i = 0; i < 0 && i < hiddenLackCards.length; i++) {
-      hiddenLackCards[i].style.display = "block";
-    }
-
-    // Check if there are hidden lack cards left
-    if (hiddenLackCards.length === 0) {
-      // Remove the load more button
-      this.style.display = "none";
-    }
-  });
-
-// document.getElementById("load-more-oil").addEventListener("click", function () {
-//   var oilCards = document.querySelectorAll(".filter.oil.hidden");
-//   for (var i = 0; i < 10 && i < oilCards.length; i++) {
-//     oilCards[i].classList.remove("hidden");
-//     oilCards[i].classList.add("btn-visible");
+//   // Теперь проверим правильно ли мы получили все элементы
+//   if (!arrowLine || !toggleButton || !buttonText || toggleItems.length === 0) {
+//     console.error("Необходимые элементы для функциональности не найдены!");
+//     return;
 //   }
 
-//   // Check if there oil cards left
-//   if (oilCards.length === 0) {
-//     // Remove the load more button
-//     this.style.display = "none";
-//   }
-// });
+//   toggleButton.addEventListener("click", function () {
+//     // Проверяем, есть ли класс visible у первого элемента списка
+//     const isVisible = toggleItems[0].classList.contains("visible");
+//     toggleItems.forEach((item) => {
+//       if (isVisible) {
+//         item.classList.remove("visible");
+//         item.classList.add("hidden");
+//       } else {
+//         item.classList.remove("hidden");
+//         item.classList.add("visible");
+//       }
+//     });
 
-// document
-//   .getElementById("load-more-lack")
-//   .addEventListener("click", function () {
-//     var lackCards = document.querySelectorAll(".filter.lack.hidden");
-//     for (var i = 0; i < 10 && i < lackCards.length; i++) {
-//       lackCards[i].classList.remove("hidden");
-//       lackCards[i].classList.add("btn-visible");
-//     }
-
-//     // Check if there are hidden lack cards left
-//     if (lackCards.length === 0) {
-//       // Remove the load more button
-//       this.style.display = "none";
+//     // Переключаем состояние стрелки и меняем только текст
+//     if (isVisible) {
+//       arrowLine.classList.remove("arrow-up");
+//       buttonText.innerHTML = "Показать еще"; // Используем innerHTML для изменения текста
+//     } else {
+//       arrowLine.classList.add("arrow-up");
+//       buttonText.innerHTML = "Скрыть"; // Используем innerHTML для изменения текста
 //     }
 //   });
+// });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("toggle-button");
+  const buttonText = document.getElementById("button-text");
+  const toggleItems = document.querySelectorAll(".toggle-item");
+  const arrowLine = document.querySelector(".arrowLine");
+  let itemsShownCount = 0; // Количество показанных элементов
+
+  // Проверка наличия всех необходимых элементов
+  if (!toggleButton || !buttonText || !arrowLine || toggleItems.length === 0) {
+    console.error("Необходимые элементы для функциональности не найдены!");
+    return;
+  }
+
+  toggleButton.addEventListener("click", function () {
+    const totalItems = toggleItems.length;
+    const itemsPerPage = 6; // Ограничение на число элементов, показываемых за один раз
+    // Флаг, проверяющий, виден ли первый элемент
+    const isVisible = toggleItems[0].classList.contains("visible");
+
+    if (isVisible && itemsShownCount >= totalItems) {
+      // Скрываем все элементы, если все они были показаны и пользователь нажимает "Скрыть"
+      [...toggleItems].forEach((item) => {
+        item.classList.remove("visible");
+        item.classList.add("hidden");
+      });
+      itemsShownCount = 0; // Сброс счетчика показанных элементов
+      arrowLine.classList.remove("arrow-up");
+      buttonText.innerHTML = "Показать еще";
+    } else if (!isVisible || itemsShownCount < totalItems) {
+      // Показываем следующие 4 элемента (или меньше, если элементов меньше)
+      for (
+        let i = itemsShownCount;
+        i < itemsShownCount + itemsPerPage && i < totalItems;
+        i++
+      ) {
+        toggleItems[i].classList.remove("hidden");
+        toggleItems[i].classList.add("visible");
+      }
+      itemsShownCount += itemsPerPage;
+
+      if (itemsShownCount < totalItems) {
+        buttonText.innerHTML = "Загрузить еще";
+        arrowLine.classList.remove("arrow-up");
+      } else {
+        buttonText.innerHTML = "Скрыть";
+        arrowLine.classList.add("arrow-up");
+      }
+    }
+  });
+});
+
+// 2
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("toggle-button1");
+  const buttonText = document.getElementById("button-text1"); // Получаем текст кнопки отдельно
+  const toggleItems = document.querySelectorAll(".toggle-item1");
+  const arrowLine = document.querySelector(".arrowLine1");
+  let itemsShownCount = 0; // Количество показанных элементов
+
+  // Теперь проверим правильно ли мы получили все элементы
+  if (!arrowLine || !toggleButton || !buttonText || toggleItems.length === 0) {
+    console.error("Необходимые элементы для функциональности не найдены!");
+    return;
+  }
+
+  toggleButton.addEventListener("click", function () {
+    const totalItems = toggleItems.length;
+    const itemsPerPage = 6; // Ограничение на число элементов, показываемых за один раз
+    // Флаг, проверяющий, виден ли первый элемент
+    const isVisible = toggleItems[0].classList.contains("visible");
+
+    if (isVisible && itemsShownCount >= totalItems) {
+      // Скрываем все элементы, если все они были показаны и пользователь нажимает "Скрыть"
+      [...toggleItems].forEach((item) => {
+        item.classList.remove("visible");
+        item.classList.add("hidden");
+      });
+      itemsShownCount = 0; // Сброс счетчика показанных элементов
+      arrowLine.classList.remove("arrow-up");
+      buttonText.innerHTML = "Показать еще";
+    } else if (!isVisible || itemsShownCount < totalItems) {
+      // Показываем следующие 4 элемента (или меньше, если элементов меньше)
+      for (
+        let i = itemsShownCount;
+        i < itemsShownCount + itemsPerPage && i < totalItems;
+        i++
+      ) {
+        toggleItems[i].classList.remove("hidden");
+        toggleItems[i].classList.add("visible");
+      }
+      itemsShownCount += itemsPerPage;
+
+      if (itemsShownCount < totalItems) {
+        buttonText.innerHTML = "Загрузить еще";
+        arrowLine.classList.remove("arrow-up");
+      } else {
+        buttonText.innerHTML = "Скрыть";
+        arrowLine.classList.add("arrow-up");
+      }
+    }
+  });
+});

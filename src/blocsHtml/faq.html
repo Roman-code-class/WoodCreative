@@ -1,4 +1,4 @@
-<div class="container faq">
+<div class="container faq faq-animation">
   <div class="text-center faq-title">
     <h2 class="h2">Часто задаваемые</h2>
     <span>вопросы</span>
@@ -6,7 +6,7 @@
   <div class="accordion accordion-faq">
     <div class="accordion-item">
       <button id="accordion-button-1" aria-expanded="false">
-        <span class="accordion-title"
+        <span class="accordion-title anim-accordion-title-faq"
           >От чего зависит и как рассчитать стоимость?</span
         ><span class="icon" aria-hidden="true"></span>
       </button>
@@ -27,7 +27,8 @@
     </div>
     <div class="accordion-item">
       <button id="accordion-button-2" aria-expanded="false">
-        <span class="accordion-title">Сколько составит срок изготовления?</span
+        <span class="accordion-title anim-accordion-title-faq"
+          >Сколько составит срок изготовления?</span
         ><span class="icon" aria-hidden="true"></span>
       </button>
       <div class="accordion-content">
@@ -40,9 +41,10 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item hide">
+    <div class="accordion-item toggle-item hidden">
       <button id="accordion-button-3" aria-expanded="false">
-        <span class="accordion-title">Как крепятся рейки и перегородки?</span
+        <span class="accordion-title anim-accordion-title-faq"
+          >Как крепятся рейки и перегородки?</span
         ><span class="icon" aria-hidden="true"></span>
       </button>
       <div class="accordion-content accordion-img-content">
@@ -68,7 +70,7 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item hide">
+    <div class="accordion-item toggle-item hidden">
       <button id="accordion-button-4" aria-expanded="false">
         <span class="accordion-title">Какая минимальная стоимость заказа?</span
         ><span class="icon" aria-hidden="true"></span>
@@ -80,7 +82,7 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item hide">
+    <div class="accordion-item toggle-item hidden">
       <button id="accordion-button-5" aria-expanded="false">
         <span class="accordion-title"
           >Сотрудничаете с дизайнерами и на каких условиях?</span
@@ -96,7 +98,7 @@
         </div>
       </div>
     </div>
-    <div class="accordion-item hide">
+    <div class="accordion-item toggle-item hidden">
       <button id="accordion-button-5" aria-expanded="false">
         <span class="accordion-title">Как происходит доставка?</span
         ><span class="icon" aria-hidden="true"></span>
@@ -141,11 +143,10 @@
               >
             </li>
           </ul>
-          <!-- End -->
         </div>
       </div>
     </div>
-    <div class="accordion-item hide">
+    <div class="accordion-item toggle-item hidden">
       <button id="accordion-button-5" aria-expanded="false">
         <span class="accordion-title"
           >Кто может установить реечные изделия?</span
@@ -188,12 +189,16 @@
       </div>
     </div>
   </div>
-  <div class="btn-centr">
-    <button
-      type="button"
-      class="show-more btn btn-outline-secondary justify-content-center"
-    >
-      Загрузить еще
+
+  <div class="toggle-container btn-centr">
+    <!-- Кнопка переключения видимости элементов -->
+    <button id="toggle-button">
+      <span id="button-text">Показать еще</span>
+      <!-- Текст кнопки в отдельный элемент -->
+      <span class="arrowLine">
+        <!-- Элемент со стрелкой -->
+        <div class="line"><%~include('./svgIcons/down.svg') %></div>
+      </span>
     </button>
   </div>
 </div>

@@ -1,52 +1,42 @@
-var myCollapsible = document.getElementById("accordionFlushExample");
-const button = document.getElementById("button-table");
+const myCollapsible = document.getElementById("accordionFlushExample");
 const headerTable = document.getElementById("header-img-page-id");
-// const headerTable = document.getElementsByClassName(".header-img-page");
 const titleheaderPage = document.getElementById("services-title-h1");
 const colorTextWhite = document.getElementById("color-text-white");
-const offcanvasOne = document.getElementById("offcanvasOne");
-const offcanvasTwo = document.getElementById("offcanvasTwo");
-const offcanvasThree = document.getElementById("offcanvasThree");
-const offcanvasFour = document.getElementById("offcanvasFour");
+const offcanvasElements = [
+  document.getElementById("offcanvasOne"),
+  document.getElementById("offcanvasTwo"),
+  document.getElementById("offcanvasThree"),
+  document.getElementById("offcanvasFour"),
+];
 
-myCollapsible.addEventListener("show.bs.collapse", function (e) {
-  const target = e.target;
-  const parentNode = target.parentNode;
-  const idx = Array.from(myCollapsible.children).indexOf(parentNode);
-  lastOpenedIdx = idx;
-  // console.log(e);
-  // console.log(idx);
-  // e.target.classList.add("on-active");
+const CLASS_NAMES = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"];
+let lastOpenedIdx = -1;
+
+// Функция для установки стилей развернутого элемента
+function setExpandedStyles(idx) {
   myCollapsible.style.backgroundColor = "rgba(33, 0, 0, 0.5)";
   colorTextWhite.style.color = "#fff";
+  headerTable.classList.add(CLASS_NAMES[idx]);
+  offcanvasElements.forEach((el) => (el.style.display = "none"));
+}
 
-  headerTable.classList.add(
-    ["img1", "img2", "img3", "img4", "img5", "img6", "img7"][idx]
-  );
-  offcanvasOne.style.display = "none";
-  offcanvasTwo.style.display = "none";
-  offcanvasThree.style.display = "none";
-  offcanvasFour.style.display = "none";
-});
-
-var myCollapsible = document.getElementById("accordionFlushExample");
-myCollapsible.addEventListener("hidden.bs.collapse", function (e) {
-  const target = e.target;
-  const parentNode = target.parentNode;
-  const idx = Array.from(myCollapsible.children).indexOf(parentNode);
-  headerTable.classList.remove(
-    ["img1", "img2", "img3", "img4", "img5", "img6", "img7"][idx]
-  );
-
-  if (idx !== lastOpenedIdx) {
-    return;
-  }
-  // console.log(e);
-  // e.target.classList.remove("on-active");
-  offcanvasOne.style.display = "block";
-  offcanvasTwo.style.display = "block";
-  offcanvasThree.style.display = "block";
-  offcanvasFour.style.display = "block";
+// Функция для сброса стилей при сворачивании элемента
+function resetStyles(idx) {
+  if (idx !== lastOpenedIdx) return;
+  offcanvasElements.forEach((el) => (el.style.display = "block"));
   myCollapsible.style.backgroundColor = "#fff";
   colorTextWhite.style.color = "#000";
+  headerTable.classList.remove(CLASS_NAMES[idx]);
+}
+
+// Обработчик событий для развернутого и свернутого состояния
+myCollapsible.addEventListener("show.bs.collapse", function (e) {
+  const idx = Array.from(myCollapsible.children).indexOf(e.target.parentNode);
+  lastOpenedIdx = idx;
+  setExpandedStyles(idx);
+});
+
+myCollapsible.addEventListener("hidden.bs.collapse", function (e) {
+  const idx = Array.from(myCollapsible.children).indexOf(e.target.parentNode);
+  resetStyles(idx);
 });

@@ -272,25 +272,6 @@ $blue: #410000;
   .accordion-faq {
   }
 
-  .hide {
-    display: none;
-  }
-
-  .accordion-item.is-visible {
-    transform: translateY(-20%);
-    animation: ani 1s forwards;
-    display: block;
-
-    @keyframes ani {
-      0% {
-        transform: translateY(-20%);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-  }
-
   .btn-centr {
     display: flex;
     justify-content: center;
@@ -303,5 +284,116 @@ $blue: #410000;
   .show-more:active,
   .show-more:hover {
     background-color: #170000;
+  }
+
+  // загрузить еще
+  #toggle-button {
+    /* Ваши стили для кнопки */
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Центрируем кнопку и иконку */
+  }
+
+  #button-text {
+    font-family: $fontFamily;
+    font-size: 0.7rem;
+    opacity: 0.6;
+  }
+
+  .arrowLine svg {
+    transition: transform 0.5s ease;
+  }
+
+  .arrowLine {
+    opacity: 0.4;
+    stroke-dasharray: 22;
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+
+  /* Скрытие элемента */
+  .hidden {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s, max-height 0.5s;
+    overflow: hidden;
+  }
+
+  /* Отображение элемента */
+  .visible {
+    opacity: 1;
+    max-height: 1000px; /* Значение max-height должно быть достаточным для показа содержимого */
+    transition: opacity 0.5s, max-height 0.5s;
+  }
+
+  .line {
+    transition: transform 0.3s ease;
+  }
+
+  /* Пульсирующая анимация вниз для стрелки */
+
+  .arrow-up {
+    transform: scaleY(-1); /* Переворачивает стрелку вверх */
+  }
+  .arrow-up .line {
+    transform: rotate(180deg);
+  }
+
+  .pulse-down {
+    animation: pulse-down 1s infinite;
+  }
+
+  .pulse-up {
+    animation: pulse-up 1s infinite;
+  }
+
+  @keyframes pulse-down {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
+
+  /* Пульсирующая анимация вверх для стрелки */
+  @keyframes pulse-up {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  /* Начальная анимация стрелки */
+  .arrowLine {
+    animation: pulse-down 1s infinite;
+  }
+
+  // аниация появления при нажатии
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .accordion-item .visible {
+    opacity: 0; /* Исходное состояние: скрыто */
+    transform: translateX(100%);
+    /* Применяем анимацию с продолжительностью 0.5с и линейной функцией времени */
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    /* animation-delay будет установлен динамически с помощью JavaScript */
   }
 }

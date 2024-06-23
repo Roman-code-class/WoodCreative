@@ -120,6 +120,7 @@
 }
 
 .form-content input[type="text"],
+.form-content input[type="phone"],
 .form-content select,
 .form-content textarea {
   width: 100%;
@@ -176,6 +177,10 @@
   border: 0;
   background-color: #ffffff;
   color: #8d8d8d;
+}
+.form-check-input {
+  border-color: #fff;
+  margin-top: 0.4rem;
 }
 
 .form-check-input:checked {

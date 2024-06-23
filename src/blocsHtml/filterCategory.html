@@ -1,5 +1,6 @@
 <div class="container filterCategory">
   <div class="row justify-content-center">
+    <!-- Кнопки фильтрации -->
     <div align="center" class="adaptive-filter-buttons">
       <button class="btn btn-default filter-button" data-filter="all">
         Все
@@ -11,7 +12,7 @@
         Тон/лак
       </button>
     </div>
-    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 oil">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 filter">
       <div id="gallery-title-oil" class="gallery-title h3">
         Американским маслом <span class="h1">Varathane</span>
       </div>
@@ -2924,7 +2925,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item oil"
     >
       <!-- триггер модального окна -->
       <div
@@ -3289,7 +3290,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item oil"
     >
       <!-- триггер модального окна -->
       <div
@@ -3654,7 +3655,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item oil hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -4019,7 +4020,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item oil hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -4384,7 +4385,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil toggle-item hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -4749,7 +4750,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil toggle-item hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -5114,7 +5115,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil toggle-item hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -5479,7 +5480,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil toggle-item hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -5844,7 +5845,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil toggle-item hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -6209,7 +6210,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil hidden"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter oil toggle-item hidden"
     >
       <!-- триггер модального окна -->
       <div
@@ -6573,17 +6574,20 @@
       <div class="text-name-color">M18</div>
     </div>
 
-    <div class="btn-center">
-      <button
-        id="load-more-oil"
-        type="button"
-        class="load-more-button btn btn-outline-secondary justify-content-center oil"
-      >
-        Загрузить еще
+    <div class="toggle-container btn-center filter oil">
+      <!-- Кнопка переключения видимости элементов -->
+      <button id="toggle-button">
+        <span id="button-text">Показать еще</span>
+        <!-- Текст кнопки в отдельный элемент -->
+        <span class="arrowLine">
+          <!-- Элемент со стрелкой -->
+          <div class="line"><%~include('./svgIcons/down.svg') %></div>
+        </span>
       </button>
     </div>
 
-    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 lack">
+    <!-- ТОН ЛАК -->
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12 filter">
       <div id="gallery-title-lack" class="gallery-title h3">Тон/лак</div>
     </div>
 
@@ -9508,7 +9512,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 toggle-item1 hidden filter lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -9873,7 +9877,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 toggle-item1 hidden filter lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -10238,7 +10242,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -10603,7 +10607,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden toggle-item1 lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -10968,7 +10972,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -11333,7 +11337,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -11698,7 +11702,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -12063,7 +12067,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -12428,7 +12432,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -12793,7 +12797,7 @@
     </div>
 
     <div
-      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter hidden lack"
+      class="gallery_product col-lg-2 col-md-2 col-sm-4 col-xs-6 filter toggle-item1 hidden lack"
     >
       <!-- триггер модального окна -->
       <div
@@ -13157,13 +13161,15 @@
       <div class="text-name-color">Дуб</div>
     </div>
 
-    <div class="btn-center">
-      <button
-        id="load-more-lack"
-        type="button"
-        class="load-more-button btn btn-outline-secondary justify-content-center lack"
-      >
-        Загрузить еще
+    <div class="toggle-container btn-center filter lack">
+      <!-- Кнопка переключения видимости элементов -->
+      <button id="toggle-button1">
+        <span id="button-text1">Показать еще</span>
+        <!-- Текст кнопки в отдельный элемент -->
+        <span class="arrowLine1">
+          <!-- Элемент со стрелкой -->
+          <div class="line"><%~include('./svgIcons/down.svg') %></div>
+        </span>
       </button>
     </div>
   </div>

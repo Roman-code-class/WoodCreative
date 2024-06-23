@@ -49,6 +49,7 @@
     "imagemin-webpack-plugin": "^2.4.2",
     "inputmask": "^5.0.8",
     "jquery": "^3.7.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "scrollreveal": "^4.0.9"
   }
 }

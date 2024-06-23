@@ -6,7 +6,7 @@
     </div>
     <ul class="project-steps">
       <li class="step">
-        <div class="step-icon"></div>
+        <div class="step-icon"><%~include('./svgIcons/user.svg') %></div>
         <h3 class="step-title">Консультация</h3>
         <p class="step-description">
           Мы обсудим ваши идеи и предложим оптимальные решения для вашего
@@ -14,7 +14,7 @@
         </p>
       </li>
       <li class="step">
-        <div class="step-icon"></div>
+        <div class="step-icon"><%~include('./svgIcons/puzzle.svg') %></div>
         <h3 class="step-title">Дизайн</h3>
         <p class="step-description">
           Наши дизайнеры разработают проект, соответствующий вашим предпочтениям
@@ -22,7 +22,7 @@
         </p>
       </li>
       <li class="step">
-        <div class="step-icon"></div>
+        <div class="step-icon"><%~include('./svgIcons/prod.svg') %></div>
         <h3 class="step-title">Производство</h3>
         <p class="step-description">
           На современном оборудовании мы изготовим качественные элементы из
@@ -30,7 +30,10 @@
         </p>
       </li>
       <li class="step">
-        <div class="step-icon"></div>
+        <div class="step-icon">
+          <div class="icon-dop-margin"></div>
+          <%~include('./svgIcons/montah.svg') %>
+        </div>
         <h3 class="step-title">Монтаж</h3>
         <p class="step-description">
           Наши специалисты выполнят монтаж быстро и аккуратно, обеспечив чистоту
@@ -41,15 +44,35 @@
 
     <div class="project-help-form">
       <h3 class="form-title">Начните ваш проект с нами</h3>
-      <form action="/send-project-request" method="POST">
-        <input type="text" placeholder="Ваше имя" />
+      <form
+        action="/send-project-request"
+        method="POST"
+        class="requires-validation"
+        novalidate
+      >
         <input
-          type="tel"
+          class="form-control"
+          type="text"
+          name="name"
+          placeholder="Ваше имя"
+          required
+        />
+        <div class="valid-feedback">Готово!</div>
+        <div class="invalid-feedback">Введите корректное имя!</div>
+        <!-- <input type="text" placeholder="Ваше имя" /> -->
+
+        <input
+          type="phone"
+          data-rule-required="true"
+          data-rule-minlength="10"
+          class="phone-input"
+          data-msg="Введите номер телефона"
           id="phone"
           name="phone"
           placeholder="+7 (___) ___-____"
+          required
         />
-
+        <div class="invalid-feedback">Введите корректный номер!</div>
         <textarea placeholder="Опишите ваш проект..."></textarea>
         <div class="form-check">
           <input
