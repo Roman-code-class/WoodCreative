@@ -78,10 +78,10 @@
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   @media #{$small-only} {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
   }
   @media #{$small} {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 
@@ -245,8 +245,8 @@
   @media #{$medium-only} {
     left: auto;
     right: 0;
-    height: 750px;
-    width: 65%;
+    height: 630px;
+    width: 60%;
   }
 
   @media #{$small-only} {

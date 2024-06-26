@@ -210,7 +210,7 @@
     right: 10%;
     // top: 50%;
     bottom: 50%;
-    max-width: 400px;
+    max-width: 600px;
     color: #000000;
     font-family: $fontFamilyDop;
     font-weight: 300;
@@ -225,7 +225,8 @@
       top: 0;
       bottom: 0;
       text-align: left;
-      padding-left: 2rem;
+      padding-top: 1.5rem;
+      padding-left: 3rem;
     }
     @media #{$small-only} {
       width: 85%;
@@ -234,7 +235,8 @@
       top: 0;
       bottom: 0;
       text-align: left;
-      padding-left: 2rem;
+      padding-top: 0.5rem;
+      padding-left: 3rem;
     }
   }
 
@@ -259,7 +261,7 @@
 
     @media #{$medium-only} {
       margin-top: 1rem;
-      padding-right: 12rem;
+      padding-right: 5rem;
       display: flex;
       justify-content: center;
     }

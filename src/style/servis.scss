@@ -154,6 +154,10 @@
       background-color: #555; // Смена цвета фона кнопки при наведении
     }
   }
+
+  .form-check-input[type="checkbox"] {
+    border-color: black;
+  }
 }
 
 // Медиазапросы для адаптивности

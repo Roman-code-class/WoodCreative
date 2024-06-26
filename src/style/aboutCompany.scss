@@ -235,10 +235,10 @@
       max-width: 400px;
     }
     @media #{$medium-only} {
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
     @media #{$small-only} {
-      margin-top: 2rem;
+      margin-top: 6rem;
     }
   }
   .map-dop-info {
@@ -250,7 +250,7 @@
       flex-direction: column;
     }
     @media #{$small-only} {
-      margin-top: 2rem;
+      margin-top: 7rem;
       flex-direction: column;
     }
   }
@@ -274,7 +274,8 @@
       margin-bottom: 1rem;
     }
     @media #{$small-only} {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
     }
   }
 

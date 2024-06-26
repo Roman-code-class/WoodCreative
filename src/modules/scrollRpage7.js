@@ -45,14 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         origin: "left", // Начальное направление анимации слева
         reset: false, // Позволяет анимации повторяться при повторном появлении элемента в зоне видимости
       });
-      ScrollReveal().reveal(".accordion-animahion-botton", {
-        duration: 1000, // Продолжительность анимации в миллисекундах
-        distance: "100px", // Начальное расстояние элемента от его конечного положения
-        easing: "ease-in-out", // Тип анимации
-        interval: 200, // Задержка между анимацией каждого элемента
-        origin: "right", // Начальное направление анимации слева
-        reset: false, // Позволяет анимации повторяться при повторном появлении элемента в зоне видимости
-      });
     } else {
       console.error("ScrollReveal is not defined.");
     }

@@ -1,6 +1,6 @@
 :root {
-  --size: 120;
-  --coefficient: 2px;
+  --size: 90;
+  --coefficient: 1px;
   --timeline: 2.6s;
   --delay: 0.65s;
   --rotation-y: -24;
@@ -14,6 +14,14 @@
   opacity: 1;
   visibility: visible;
   transition: opacity 1s ease, visibility 1s ease;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // background: #fff;
+  z-index: 9999; /* устанавливаем высокий z-index, чтобы оставаться поверх остального контента */
 }
 
 .preloader {
@@ -21,8 +29,9 @@
   place-items: center;
   min-height: 100vh;
   font-family: "Google Sans", sans-serif, system-ui;
-  transform-origin: 50% 50%;
-  animation: scale var(--timeline) var(--delay) infinite linear;
+  // transform-origin: 50% 50%;
+  // animation: scale var(--timeline) var(--delay) infinite linear;
+  background: #fff;
   *,
   *:after,
   *:before {
@@ -142,6 +151,7 @@
   }
 
   /* Cuboid boilerplate code */
+
   .cuboid {
     width: 100%;
     height: 100%;

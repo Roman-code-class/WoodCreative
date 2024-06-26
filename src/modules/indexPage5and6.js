@@ -1,5 +1,6 @@
 import "./bootstrap.js";
 import "./scrollRpage5and6.js";
+import "./navBurger.js";
 import "./sladerPortfolio.js";
 import "./showMore.js";
 import "./faq.js";

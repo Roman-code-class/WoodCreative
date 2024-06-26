@@ -7,8 +7,8 @@
   justify-content: center;
 
   svg {
-    @media #{$small} {
-      width: 30px;
+    @media #{$small-only} {
+      width: 20px;
     }
   }
 }

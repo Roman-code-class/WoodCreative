@@ -1,89 +1,112 @@
-<!-- Навигация -->
-<nav class="navbar navbar-expand-md navbar-light fixed-top">
-  <a class="navbar-brand" href="./index.html">
-    <img src="@images/logo3.png" alt="" width="150" height="200" />
-  </a>
-  <div class="collapse navbar-collapse menu-nav" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link menu-hover dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Продукция
-        </a>
-        <ul
-          class="dropdown-menu"
-          data-bs-popper="none"
-          aria-labelledby="navbarDropdown"
-        >
-          <li>
-            <a class="dropdown-item" href="./page2.html"
-              >Стеновые и потолочные рейки</a
+<div class="menuNav">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <a class="navbar-brand" href="./index.html">
+      <img src="@images/logo3.png" alt="" width="150" height="200" />
+    </a>
+    <!-- Триггер для offcanvas меню -->
+    <button class="navbar-toggler" type="button" id="burgerButton">
+      <input
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+        aria-label="Переключатель навигации"
+        type="checkbox"
+        role="button"
+        class="menu-burger navbar-toggler-icon"
+        id="menuToggleBtn"
+      />
+    </button>
+
+    <!-- Боковая панель offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <!-- <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Меню</h5> -->
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Ваше меню -->
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link menu-hover dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Продукция
+            </a>
+            <ul
+              class="dropdown-menu"
+              data-bs-popper="none"
+              aria-labelledby="navbarDropdown"
+            >
+              <li>
+                <a class="dropdown-item" href="./page2.html"
+                  >Стеновые и потолочные рейки</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="./page3.html"
+                  >Реечные перегородки</a
+                >
+              </li>
+              <!-- <li><hr class="dropdown-divider" /></li> -->
+              <li>
+                <a class="dropdown-item" href="./page4.html">3D панели</a>
+              </li>
+              <li><a class="dropdown-item" href="./page5.html">Лестницы</a></li>
+              <li><a class="dropdown-item" href="./page6.html">Мебель</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link menu-hover dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Услуги
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="./page7.html">Фрезерная резка</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./page8.html">Кромкооблицовка</a>
+              </li>
+              <li><a class="dropdown-item" href="./page9.html">Сервис</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link menu-hover"
+              aria-current="page"
+              href="./page10.html"
+              >О компании</a
             >
           </li>
-          <li>
-            <a class="dropdown-item" href="./page3.html">Реечные перегородки</a>
+          <li class="nav-item">
+            <a class="nav-link menu-hover" href="./page12.html">Портфолио</a>
           </li>
-          <!-- <li><hr class="dropdown-divider" /></li> -->
-          <li><a class="dropdown-item" href="./page4.html">3D панели</a></li>
-          <li><a class="dropdown-item" href="./page5.html">Лестницы</a></li>
-          <li><a class="dropdown-item" href="./page6.html">Мебель</a></li>
+          <li class="nav-item">
+            <a class="nav-link menu-hover" href="./page11.html">Контакты</a>
+          </li>
         </ul>
-      </li>
-      <li class="nav-item dropdown">
-        <a
-          class="nav-link menu-hover dropdown-toggle"
-          href="#"
-          id="navbarDropdown"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Услуги
-        </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li>
-            <a class="dropdown-item" href="./page7.html">Фрезерная резка</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="./page8.html">Кромкооблицовка</a>
-          </li>
-          <li><a class="dropdown-item" href="./page9.html">Сервис</a></li>
-        </ul>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link menu-hover" aria-current="page" href="./page10.html"
-          >О компании</a
-        >
-      </li>
-      <li class="nav-item">
-        <a class="nav-link menu-hover" href="./page12.html">Портфолио</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link menu-hover" href="./page11.html">Контакты</a>
-      </li>
-    </ul>
-  </div>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Переключатель навигации"
-  >
-    <input
-      type="checkbox"
-      role="button"
-      aria-label="Display the menu"
-      class="menu-burger navbar-toggler-icon"
-    />
-    <!-- <span class="navbar-toggler-icon"></span> -->
-  </button>
-</nav>
+      </div>
+    </div>
+  </nav>
+</div>

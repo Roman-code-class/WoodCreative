@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function initScrollReveal() {
     // Проверяем, что ScrollReveal доступен
     if (typeof ScrollReveal !== "undefined") {
-      ScrollReveal().reveal(".gallery_product", {
+      ScrollReveal().reveal(".img-responsive", {
         duration: 700, // Продолжительность анимации в миллисекундах
         distance: "100px", // Начальное расстояние элемента от его конечного положения
         easing: "ease-in-out", // Тип анимации

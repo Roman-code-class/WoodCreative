@@ -1,12 +1,21 @@
 .filterCategory {
-  margin-top: 30px;
   .row {
     background-color: #ffffff;
   }
   .adaptive-filter-buttons {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
     @media #{$small-only} {
       display: flex;
       flex-direction: column;
+    }
+  }
+  .gallery {
+    @media #{$medium-only} {
+      margin-bottom: 1rem;
+    }
+    @media #{$small-only} {
+      margin-bottom: 1rem;
     }
   }
   .gallery-title {
@@ -68,9 +77,11 @@
       width: 16.66666%; /* 6 карточек в ряд */
     }
     @media #{$medium-only} {
+      margin-bottom: 0.5rem;
       width: 25%; /* 4 карточки в ряду */
     }
     @media #{$small-only} {
+      margin-bottom: 0.4rem;
       width: 40%; /* 2 карточки в ряд */
     }
   }
@@ -96,6 +107,12 @@
     display: flex;
     margin-top: 5px;
     margin-bottom: 20px;
+    @media #{$medium-only} {
+      margin-bottom: 2rem;
+    }
+    @media #{$small-only} {
+      margin-bottom: 2rem;
+    }
   }
 
   // Доп классы для js
@@ -214,5 +231,9 @@
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
     /* animation-delay будет установлен динамически с помощью JavaScript */
+  }
+
+  .carousel-item .d-block {
+    border-radius: 20px;
   }
 }

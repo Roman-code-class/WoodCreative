@@ -36,8 +36,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .text-center {
-  }
   @media #{$small-only} {
     // height: 180px;
   }
@@ -142,7 +140,8 @@
     max-width: 100%;
   }
   .hover-text h2 {
-    font-size: 12vw;
+    // font-size: 12vw;
+    display: none;
   }
 }
 
@@ -160,10 +159,10 @@
   -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  @media (max-width: 1024px) {
+  @media #{$medium-only} {
     display: block;
   }
-  @media (max-width: 1200px) and (orientation: landscape) {
+  @media #{$small-only} {
     display: block;
   }
 }
