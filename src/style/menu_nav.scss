@@ -187,7 +187,15 @@
     outline-offset: 5px;
   }
 
+  .navbar-toggler {
+    z-index: 1050;
+  }
+
   .btn-close {
     opacity: 0;
+  }
+
+  .offcanvas-backdrop.show {
+    opacity: 0.75;
   }
 }
