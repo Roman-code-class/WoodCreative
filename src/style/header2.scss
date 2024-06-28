@@ -16,9 +16,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
-  @media #{$small-only} {
-    background-size: contain;
-  }
 }
 .neon-title {
 }

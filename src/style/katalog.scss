@@ -67,6 +67,12 @@
 .section-row:hover .section-col {
   opacity: 0.5;
   transition: transform 250ms linear, opacity 250ms ease;
+  @media #{$medium-only} {
+    opacity: 1;
+  }
+  @media #{$small-only} {
+    opacity: 1;
+  }
 }
 .section-row .section-col:hover {
   opacity: 1;

@@ -1,3 +1,11 @@
+.footer {
+  @media #{$medium-only} {
+    margin-top: 3rem;
+  }
+  @media #{$small-only} {
+    margin-top: 3rem;
+  }
+}
 .colon {
   margin-top: 15px;
   @media #{$small-only} {
@@ -55,5 +63,23 @@ address {
   }
   @media #{$small} {
     width: 15vh;
+  }
+}
+
+footer {
+  .mobil-widget {
+    @media #{$small-only} {
+      margin-top: 2rem;
+    }
+  }
+
+  .mobil-list-unstyled {
+    @media #{$small-only} {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .dop-mobil-adaptive {
+    padding-top: 0 !important;
   }
 }

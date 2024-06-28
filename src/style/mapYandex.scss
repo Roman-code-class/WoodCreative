@@ -6,6 +6,7 @@
   margin-bottom: 15px;
 
   @media #{$small-only} {
+    margin-top: 5rem;
     flex-flow: column;
     height: 47vh;
   }
@@ -52,21 +53,20 @@
     margin-top: 2rem;
   }
   .sticker {
-    max-width: 550px;
+    max-width: 420px;
     height: auto;
     @media #{$medium-only} {
-      max-width: 420px;
     }
     @media #{$small-only} {
       position: absolute;
-      top: 7rem;
+      top: 0rem;
       left: auto;
       right: 0;
       width: 100%;
     }
     @media #{$small} {
       position: absolute;
-      top: 13rem;
+      top: 0rem;
       left: auto;
       right: 0;
       width: 100%;
